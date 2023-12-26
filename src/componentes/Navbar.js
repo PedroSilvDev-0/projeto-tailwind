@@ -18,6 +18,22 @@ const Navbar = () => {
                     <li className="bg-blue-500 text-gray-100 hover:text-bluelogo flex items-center justify-center w-32 h-16 hover:border-b-4 border-bluelogo ml-2"> <Link to="/contato">Contato</Link> </li>
                 </ul>
             </div>
+
+            <section className='flex justify-center mt-64 mb-64'>
+                <div className='grid justify-items-center'>
+                    <img className='w-64' src={Logo} alt='Error'/>
+                    <h1 className='text-white font-bold text-6xl mb-6'>React</h1>
+                    <h3 className='text-white font-bold text-3xl'>A biblioteca para interfaces de usuário web e nativas</h3>
+
+                    <h3 className='bg-blue-500 text-gray-100 hover:text-bluelogo flex items-center justify-center p-6 '>Componentes-React</h3>
+                    <h3 className='bg-blue-500 text-bluelogo hover:text-gray-100 flex items-center justify-center p-6'>Fale Comigo</h3>
+                </div>
+            </section>
+
+            <div className='grid grid-flow-col m-10'>
+                <div className='w-64 h-64 bg-bluelogo'>Hello</div>
+                <div className='w-64 h-64 bg-bluelogo'>Hello2</div>
+            </div>
         </div>
     )
 }
