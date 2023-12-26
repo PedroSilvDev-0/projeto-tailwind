@@ -1,13 +1,48 @@
 import React from 'react';
+import App from './App'
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// 1 - configurando o router
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import Navbar from './componentes/Navbar';
+import Sobre from './componentes/Sobre';
+import Contato from './componentes/Contato'
+import ErrorPage from './componentes/ErrorPage';
+import FormasContato from './componentes/FormasContato';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "/",
+        element: <Navbar/>,
+      },
+      {
+        path: "sobre",
+        element: <Sobre/>,
+      },
+      {
+        path: "contato",
+        element: <Contato/>,
+      },
+      {
+        path: "/contato/:id",
+        element: <FormasContato/>,
+      },
+    ]
+  }, 
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
