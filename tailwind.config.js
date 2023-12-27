@@ -13,6 +13,7 @@ module.exports = {
       'bluelogo': '#61DAFB',
       'blue': {
         500: '#030028',
+        400: '#060046'
       },
       'gray': {
         100: '#A7A7A7',

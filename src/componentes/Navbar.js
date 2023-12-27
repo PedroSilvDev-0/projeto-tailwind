@@ -1,6 +1,7 @@
 import Logo from './images/logo.svg'
 import { Link } from 'react-router-dom'
-
+import Button1 from './buttons/Button1'
+import Button2 from './buttons/Button2'
 
 const Navbar = () => {
     return(
@@ -25,8 +26,19 @@ const Navbar = () => {
                     <h1 className='text-white font-bold text-6xl mb-6'>React</h1>
                     <h3 className='text-white font-bold text-3xl'>A biblioteca para interfaces de usuário web e nativas</h3>
 
-                    <h3 className='bg-blue-500 text-gray-100 hover:text-bluelogo flex items-center justify-center p-6 '>Componentes-React</h3>
-                    <h3 className='bg-blue-500 text-bluelogo hover:text-gray-100 flex items-center justify-center p-6'>Fale Comigo</h3>
+                    <div className='flex items-center mt-12'>
+                        <div>
+                            <Button1
+                            name='Componentes-React'
+                            link=''
+                            />
+                        </div>
+                        <div className='ml-6'>
+                            <Button2
+                            name='Conecte-se comigo'
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 
